@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="property_types">
+        <item>Single Family</item>
+        <item>Condo</item>
+        <item>Townhome</item>
+        <item>Multi Family</item>
+    </string-array>
+</resources>

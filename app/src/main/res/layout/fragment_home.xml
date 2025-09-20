@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Home">
+
+
+    <!-- Search bar -->
+
+    <LinearLayout
+        android:id="@+id/custom_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/colorPrimary"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_arrow_back_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Indietro"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_account_circle_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Profilo"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+
+
+
+
+    <!-- Search bar con icona Filtri -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search city or address"
+            android:iconifiedByDefault="false"
+            android:layout_marginEnd="48dp" />
+
+        <ImageButton
+            android:id="@+id/filters_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Filtri"
+            android:padding="8dp"
+            app:tint="?attr/colorPrimary"
+            android:src="@drawable/outline_discover_tune_24" />
+    </FrameLayout>
+
+    <!-- Titolo sezione -->
+    <TextView
+        android:id="@+id/trending_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trending Cities"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trending_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+    android:clipToPadding="false"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    tools:listitem="@layout/item_trending_card"/>
+
+
+
+
+    <!-- Titolo sezione -->
+    <TextView
+        android:id="@+id/trending_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trending Cities"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trending_recycler2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+        android:clipToPadding="false"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_trending_card"/>
+
+
+
+
+    <!-- Lista dei risultati -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/results_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/single_property_view"
+        layout="@layout/listing_preview"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/sell_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post a Listing"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white" />
+
+
+
+
+
+</LinearLayout>
+
+

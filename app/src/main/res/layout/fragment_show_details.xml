@@ -1,0 +1,200 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Indietro"
+                android:src="@drawable/outline_arrow_back_24"
+                app:tint="@android:color/darker_gray" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Salva"
+                android:src="@drawable/outline_bookmark_add_24"
+                app:tint="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Descrizione -->
+        <TextView
+            android:id="@+id/propertyDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/propertyDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Box info generiche -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#EFEFEF"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/propertyPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/propertyLivingArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/propertyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/propertyType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/propertyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Box dettagli aggiuntivi -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Dettagli aggiuntivi"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/bathroomInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bathrooms: -" />
+            <TextView
+                android:id="@+id/bedroomInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bedrooms: -" />
+            <TextView
+                android:id="@+id/yearBuilt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year Built: -" />
+            <TextView
+                android:id="@+id/lotSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lot Size: -" />
+            <TextView
+                android:id="@+id/pricePerSquareFoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price per sqft: -" />
+
+            <TextView
+                android:id="@+id/garageInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garage: -" />
+
+            <TextView
+                android:id="@+id/coolingInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooling: -" />
+
+            <TextView
+                android:id="@+id/heatingInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heating: -" />
+
+            <TextView
+                android:id="@+id/flooring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flooring: -" />
+
+            <TextView
+                android:id="@+id/appliances"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appliances: -" />
+
+            <TextView
+                android:id="@+id/hoaInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOA Fee: -" />
+
+            <TextView
+                android:id="@+id/hoaFrequencyInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOA Frequency: -" />
+
+
+        </LinearLayout>
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+</ScrollView>

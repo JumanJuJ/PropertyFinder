@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/filters_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filters"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- Tipologia -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textStyle="bold"
+            android:paddingTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/cb_multiFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="multifamily" />
+
+        <CheckBox
+            android:id="@+id/cb_singleFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="singleFamily" />
+
+        <CheckBox
+            android:id="@+id/cb_townhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="townhome" />
+
+
+        <CheckBox
+            android:id="@+id/cb_condo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="condo" />
+
+
+
+        <!-- Prezzo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textStyle="bold"
+            android:paddingTop="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/tv_price_min_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0 - " />
+
+            <TextView
+                android:id="@+id/tv_price_max_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$1.000.000" />
+        </LinearLayout>
+
+        <!-- Slider minimo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min" />
+
+        <SeekBar
+            android:id="@+id/sb_prezzo_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200" />
+
+        <!-- Slider massimo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max"
+            android:paddingTop="8dp" />
+        <SeekBar
+            android:id="@+id/sb_prezzo_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200" />
+
+
+        <!-- livingArea -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Living Area"
+            android:textStyle="bold"
+            android:paddingTop="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/tv_livingArea_min_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 sqft - " />
+
+            <TextView
+                android:id="@+id/tv_livingArea_max_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.000 sqft" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min" />
+
+        <SeekBar
+            android:id="@+id/sb_livingArea_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max"
+            android:paddingTop="8dp" />
+
+        <SeekBar
+            android:id="@+id/sb_livingArea_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200" />
+
+
+        <!-- lotSize -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lot Size"
+            android:textStyle="bold"
+            android:paddingTop="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/tv_lotSize_min_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 sqft - " />
+
+            <TextView
+                android:id="@+id/tv_lotSize_max_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.000 sqft" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min" />
+
+        <SeekBar
+            android:id="@+id/sb_lotSize_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max"
+            android:paddingTop="8dp" />
+
+        <SeekBar
+            android:id="@+id/sb_lotSize_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200" />
+
+        <!-- Pulsanti -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset" />
+
+            <Button
+                android:id="@+id/btn_applica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

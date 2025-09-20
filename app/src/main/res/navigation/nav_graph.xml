@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/introFragment3">
+
+    <!-- INTRO -->
+    <fragment
+        android:id="@+id/introFragment3"
+        android:name="com.example.PropertyFinder.IntroFragment"
+        android:label="Intro"
+        tools:layout="@layout/fragment_intro">
+        <action
+            android:id="@+id/action_introFragment3_to_login"
+            app:destination="@id/login" />
+    </fragment>
+
+    <!-- LOGIN -->
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.PropertyFinder.Login"
+        tools:layout="@layout/fragment_login"
+    android:label="Login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+
+    <!-- REGISTER -->
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.PropertyFinder.Register"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
+
+    <!-- HOME -->
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.PropertyFinder.Home"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false"
+            />
+
+        <action
+            android:id="@+id/action_home2_to_showDetails"
+            app:destination="@id/showDetails" />
+
+        <action
+            android:id="@+id/action_home2_to_sell"
+            app:destination="@id/sell" />
+
+        <action
+            android:id="@+id/action_home2_to_profile"
+            app:destination="@id/profile" />
+
+        <action
+            android:id="@+id/action_home2_to_login"
+            app:destination="@id/login" />
+    </fragment>
+
+    <!-- SELL -->
+    <fragment
+        android:id="@+id/sell"
+        android:name="com.example.PropertyFinder.Sell"
+        android:label="Vendita"
+        tools:layout="@layout/fragment_sell" >
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sell_to_addMyListings"
+            app:destination="@id/addMyListings" />
+        <action
+            android:id="@+id/action_sell_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+
+    <!-- SHOW DETAILS -->
+    <fragment
+        android:id="@+id/showDetails"
+        android:name="com.example.PropertyFinder.ShowDetails"
+        android:label="Dettagli"
+        tools:layout="@layout/fragment_show_details">
+
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="address"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <!-- PROFILE -->
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.PropertyFinder.Profile"
+        android:label="Profilo"
+        tools:layout="@layout/fragment_profile">
+
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_profile_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_profile_to_showDetails"
+            app:destination="@id/showDetails" />
+    </fragment>
+
+    <!-- ADD MY LISTINGS -->
+    <fragment
+        android:id="@+id/addMyListings"
+        android:name="com.example.PropertyFinder.AddMyListings"
+        android:label="AddMyListings"
+        tools:layout="@layout/fragment_add_my_listings">
+
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_addMyListings_to_sell"
+            app:destination="@id/sell" />
+    </fragment>
+
+</navigation>
